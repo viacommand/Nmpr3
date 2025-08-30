@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Even and Odd Numbers</title>
+        <style>
+            body {
+                  font-family: Arial, sans-serif;
+                        text-align: center;
+                              margin-top: 50px;
+                                  }
+                                      select, button {
+                                            padding: 8px;
+                                                  margin: 10px;
+                                                        font-size: 16px;
+                                                            }
+                                                                #result {
+                                                                      margin-top: 20px;
+                                                                            font-size: 18px;
+                                                                                  font-weight: bold;
+                                                                                        color: blue;
+                                                                                            }
+                                                                                              </style>
+                                                                                              </head>
+                                                                                              <body>
+                                                                                                <h2>Print Even or Odd Numbers (1 to 10)</h2>
+
+                                                                                                  <label for="choice">Choose:</label>
+                                                                                                    <select id="choice">
+                                                                                                        <option value="even">Even Numbers</option>
+                                                                                                            <option value="odd">Odd Numbers</option>
+                                                                                                              </select>
+
+                                                                                                                <button onclick="printNumbers()">Show Numbers</button>
+
+                                                                                                                  <div id="result"></div>
+
+                                                                                                                    <script>
+                                                                                                                        function printNumbers() {
+                                                                                                                              let choice = document.getElementById("choice").value;
+                                                                                                                                    let output = "";
+
+                                                                                                                                          for (let i = 1; i <= 10; i++) {
+                                                                                                                                                  if (choice === "even" && i % 2 === 0) {
+                                                                                                                                                            output += i + " ";
+                                                                                                                                                                    } else if (choice === "odd" && i % 2 !== 0) {
+                                                                                                                                                                              output += i + " ";
+                                                                                                                                                                                      }
+                                                                                                                                                                                            }
+
+                                                                                                                                                                                                  document.getElementById("result").innerText = output;
+                                                                                                                                                                                                      }
+                                                                                                                                                                                                        </script>
+                                                                                                                                                                                                        </body>
+                                                                                                                                                                                                        </html>
